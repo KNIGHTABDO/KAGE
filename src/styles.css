@@ -1,0 +1,192 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@theme {
+  /* KAGE color tokens (dark theme baseline) */
+  --color-background: #000000;
+  --color-foreground: #e5e2e1;
+  --color-surface: #131313;
+  --color-surface-tint: #ffb4ab;
+  --color-surface-bright: #393939;
+  --color-surface-dim: #131313;
+  --color-surface-variant: #353534;
+  --color-surface-container: #201f1f;
+  --color-surface-container-low: #1c1b1b;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-surface-container-high: #2a2a2a;
+  --color-surface-container-highest: #353534;
+  --color-inverse-surface: #e5e2e1;
+  --color-inverse-on-surface: #313030;
+  --color-inverse-primary: #b91c1c;
+  --color-primary: #ffb4ab;
+  --color-on-primary: #690005;
+  --color-primary-container: #b91c1c;
+  --color-on-primary-container: #ffcdc7;
+  --color-primary-fixed: #ffdad6;
+  --color-primary-fixed-dim: #ffb4ab;
+  --color-on-primary-fixed: #410002;
+  --color-on-primary-fixed-variant: #93000b;
+  --color-secondary: #e9c349;
+  --color-on-secondary: #3c2f00;
+  --color-secondary-container: #af8d11;
+  --color-on-secondary-container: #342800;
+  --color-secondary-fixed: #ffe088;
+  --color-secondary-fixed-dim: #e9c349;
+  --color-on-secondary-fixed: #241a00;
+  --color-on-secondary-fixed-variant: #574500;
+  --color-tertiary: #c3c0ff;
+  --color-on-tertiary: #1d00a5;
+  --color-tertiary-container: #4d44e3;
+  --color-on-tertiary-container: #d7d4ff;
+  --color-tertiary-fixed: #e2dfff;
+  --color-tertiary-fixed-dim: #c3c0ff;
+  --color-on-tertiary-fixed: #0f0069;
+  --color-on-tertiary-fixed-variant: #3323cc;
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+  --color-on-background: #e5e2e1;
+  --color-on-surface: #e5e2e1;
+  --color-on-surface-variant: #e4beb9;
+  --color-outline: #ab8985;
+  --color-outline-variant: #5b403d;
+
+  /* shadcn fallbacks (rarely used in this app) */
+  --color-card: #131313;
+  --color-card-foreground: #e5e2e1;
+  --color-popover: #131313;
+  --color-popover-foreground: #e5e2e1;
+  --color-primary-foreground: #690005;
+  --color-secondary-foreground: #3c2f00;
+  --color-muted: #201f1f;
+  --color-muted-foreground: #e4beb9;
+  --color-accent: #201f1f;
+  --color-accent-foreground: #e5e2e1;
+  --color-destructive: #ffb4ab;
+  --color-destructive-foreground: #690005;
+  --color-border: #353534;
+  --color-input: #353534;
+  --color-ring: #ffb4ab;
+
+  /* Fonts */
+  --font-body-md: "Hanken Grotesk", system-ui, sans-serif;
+  --font-body-lg: "Hanken Grotesk", system-ui, sans-serif;
+  --font-label-sm: "Hanken Grotesk", system-ui, sans-serif;
+  --font-label-md: "Hanken Grotesk", system-ui, sans-serif;
+  --font-display-lg: "Bodoni Moda", serif;
+  --font-display-lg-mobile: "Bodoni Moda", serif;
+  --font-headline-lg: "Bodoni Moda", serif;
+  --font-headline-lg-mobile: "Bodoni Moda", serif;
+  --font-headline-md: "Bodoni Moda", serif;
+
+  /* Text sizes */
+  --text-body-md: 16px;
+  --text-body-md--line-height: 28px;
+  --text-body-md--letter-spacing: 0.01em;
+  --text-body-md--font-weight: 400;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 32px;
+  --text-body-lg--letter-spacing: 0.01em;
+  --text-body-lg--font-weight: 400;
+
+  --text-label-sm: 10px;
+  --text-label-sm--line-height: 12px;
+  --text-label-sm--letter-spacing: 0.15em;
+  --text-label-sm--font-weight: 700;
+
+  --text-label-md: 12px;
+  --text-label-md--line-height: 16px;
+  --text-label-md--letter-spacing: 0.1em;
+  --text-label-md--font-weight: 600;
+
+  --text-headline-md: 24px;
+  --text-headline-md--line-height: 32px;
+  --text-headline-md--letter-spacing: 0.03em;
+  --text-headline-md--font-weight: 500;
+
+  --text-headline-lg: 40px;
+  --text-headline-lg--line-height: 48px;
+  --text-headline-lg--letter-spacing: 0.02em;
+  --text-headline-lg--font-weight: 600;
+
+  --text-headline-lg-mobile: 32px;
+  --text-headline-lg-mobile--line-height: 36px;
+  --text-headline-lg-mobile--letter-spacing: 0.02em;
+  --text-headline-lg-mobile--font-weight: 600;
+
+  --text-display-lg: 72px;
+  --text-display-lg--line-height: 80px;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg--font-weight: 700;
+
+  --text-display-lg-mobile: 44px;
+  --text-display-lg-mobile--line-height: 48px;
+  --text-display-lg-mobile--letter-spacing: -0.01em;
+  --text-display-lg-mobile--font-weight: 700;
+
+  /* Spacing tokens */
+  --spacing-gutter: 24px;
+  --spacing-margin-desktop: 64px;
+  --spacing-margin-mobile: 20px;
+  --spacing-unit: 8px;
+
+  --container-canvas: 1440px;
+
+  --radius-DEFAULT: 0.125rem;
+  --radius-sm: 0.125rem;
+  --radius-md: 0.1875rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-2xl: 0.75rem;
+  --radius-full: 9999px;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-surface-container-highest);
+  }
+  html, body {
+    background-color: #000000;
+    color: var(--color-on-surface);
+  }
+  body {
+    font-family: var(--font-body-md);
+    -webkit-font-smoothing: antialiased;
+  }
+  .material-symbols-outlined {
+    font-family: "Material Symbols Outlined";
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  .glass-panel {
+    background: rgba(18, 18, 18, 0.6);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+  .immersive-gradient {
+    background: linear-gradient(to top, #000 5%, rgba(0,0,0,0.85) 30%, rgba(0,0,0,0.4) 60%, transparent 100%);
+  }
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #131313; }
+::-webkit-scrollbar-thumb { background: #353534; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #ffb4ab; }
